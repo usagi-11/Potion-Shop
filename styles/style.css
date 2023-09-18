@@ -14,7 +14,7 @@ body {
 
 #start-screen {
     display: block;
-    position: absolute;
+    position: relative;
 }
 
 #title {
@@ -40,22 +40,40 @@ body {
 
 #game-screen {
     display: none;
+    position: relative;
 }
 
+.potions {
+    position: absolute;
+
+}
+.potions, img {
+    padding: 0;
+    margin: 0;
+}
 .score, .time {
     font-size: 30px;
     color: #bc4440;
     font-weight: bold;
     position: absolute;
-    top: 820px;
+    top: 660px;
+}
+
+.recipeStr {
+    font-size: 30px;
+    color: #bc4440;
+    font-weight: bold;
+    position: absolute;
+    top: 60px;
+    left: 540px;
 }
 
 .score {
-    left: 300px
+    left: 50px
 }
 
 .time {
-    right: 500px
+    right: 200px
 }
 
 #end-screen {

@@ -3,9 +3,9 @@ class Game {
         this.startScreen = document.getElementById("start-screen")
         this.gameScreen = document.getElementById("game-screen")
         this.endScreen = document.getElementById("end-screen")
-      this.score = 0
-      this.time = 0
-      this.gameOver = false
+        this.score = 0
+        this.time = 0
+        this.gameOver = false
     }
 
     start() {
@@ -17,10 +17,4 @@ class Game {
         this.gameScreen.style.width = `${this.width}px`
 }
 }
-
-/*document.getElementById("start-button").onclick = function() {
-    document.getElementById("start-screen").style.display = "none";
-    document.getElementById("game-screen").style.display = "block";
-    document.getElementById("end-screen").style.display = "none";
-}*/
 
