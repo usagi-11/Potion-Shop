@@ -17,7 +17,6 @@ class Game {
             this.sec--;
             if (this.sec < 0) {
                 clearInterval(this.timer);
-                
             }
         }, 1000)
     }
@@ -33,7 +32,7 @@ class Game {
 }
 }
 
-
+/* Audio.volume, audio. */
 
 /* function clearTimer(){
     
