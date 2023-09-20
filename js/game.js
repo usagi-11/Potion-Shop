@@ -3,7 +3,8 @@ class Game {
         this.startScreen = document.getElementById("start-screen")
         this.gameScreen = document.getElementById("game-screen")
         this.endScreen = document.getElementById("end-screen")
-        this.score = 0
+        //this.score = 0
+        //this.scoreKeep = document.getElementsByClassName("score-keep")
         this.timerElement = document.querySelector('.time')
         this.timer = 0
         this.sec = 6
@@ -42,4 +43,29 @@ function randomImage() {
     this.recipePotion.src = potionArray[randomIndex];
 }
 }
+
+/* score(){
+    function scoreAdd(){
+        const sumValue = parseInt(this.scoreKeep.innerText);
+        console.log(sumValue+1);
+    }
 }
+
+score(){
+    
+} */
+
+
+
+
+}
+
+
+
+ function scoreAdd(){
+    const scoreKeep = document.querySelector(".score-keep");
+    console.log(scoreKeep.innerText);
+    const counter = parseInt(scoreKeep.innerText) +100;
+    console.log(counter);
+    scoreKeep.innerText = counter;
+} 
