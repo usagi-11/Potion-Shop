@@ -68,6 +68,29 @@ body {
     left: 540px;
 }
 
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 125px;
+    left: 506px
+}
+
+.flexbox-item {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 4px solid black;
+    background-color: blue;
+}
+
+.random-image {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
+
 .recipePotions {
     position: absolute;
 }

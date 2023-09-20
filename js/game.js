@@ -8,6 +8,8 @@ class Game {
         this.timer = 0
         this.sec = 6
         this.potion = document.querySelectorAll(".potions")
+        this.potionRandomizer = 0
+        this.recipePotion = document.getElementsByClassName("random-image")
         this.gameOver = false
         
     }
@@ -30,37 +32,14 @@ class Game {
         this.gameScreen.style.width = `${this.width}px`
         this.setTimer();
 }
+
+randomizeRecipe(){
+const potionArray = ['images/recipePotion1.png', 'images/recipePotion2.png', 'images/recipePotion3.png', 'images/recipePotion4.png', 'images/recipePotion5.png', 'images/recipePotion6.png', 'images/recipePotion7.png', 'images/recipePotion8.png', 'images/recipePotion9.png', 'images/recipePotion10.png', 'images/recipePotion11.png', 'images/recipePotion12.png', 'images/recipePotion13.png', 'images/recipePotion14.png', 'images/recipePotion15.png', 'images/recipePotion16.png', 'images/recipePotion17.png', 'images/recipePotion18.png', ];
+
+randomImage();
+function randomImage() {
+    const randomIndex = Math.floor(Math.random()*potionArray.length);
+    this.recipePotion.src = potionArray[randomIndex];
 }
-
-/* Audio.volume, audio. */
-
-/* function clearTimer(){
-    
-        console.log(sec);
-    }
 }
-clearTimer(); */
-
-/*const imageArray = ['potion1.png', 'potion2.png', 'potion3.png', 'potion4.png', 'potion5.png', 'potion6.png', 'potion7.png', 'potion8.png', 'potion9.png', 'potion10.png', 'potion11.png', 'potion12.png', 'potion13.png', 'potion14.png', 'potion15.png', 'potion16.png', 'potion17.png', 'potion18.png']
-
-function getRandomImage(){
-    randomIndex = Math.floor(Math.random() * imageArray.length)
-    selectedImage = imageArray[randomIndex]
-    document.getElementById('imagesRandom').src = `./images/${selectedImage}`
-} */
-
-/* const imageArray = ['images/recipePotion1.png', 'recipePotion2.png', 'recipePotion3.png', 'recipePotion4.png', 'recipePotion5.png', 'recipePotion6.png', 'recipePotion7.png', 'recipePotion8.png', 'recipePotion9.png', 'recipePotion10.png', 'recipePotion11.png', 'recipePotion12.png', 'recipePotion13.png', 'recipePotion14.png', 'recipePotion15.png', 'recipePotion16.png', 'recipePotion17.png', 'recipePotion18.png']
-let index;
-randomImageFunction();
-function randomImageFunction() {
-    const randomImage = setInterval(()=>{
-        const randomIndex = Math.floor(Math.random()*imageArray.length);
-        if (randomIndex !== index) {
-            imgEl.src = imageArray[randomIndex];
-            index = randomIndex;
-        }
-        else {
-            randomImageFunction();
-        }
-    },1000)
-}  */
+}
