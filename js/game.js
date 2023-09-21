@@ -7,17 +7,21 @@ class Game {
         //this.scoreKeep = document.getElementsByClassName("score-keep")
         this.timerElement = document.querySelector('.time')
         this.timer = 0
-        this.sec = 6
+        this.sec = 10
+        this.timerElement.innerHTML = 'TIME: 00:' +this.sec;
         this.potion = document.querySelectorAll(".potions")
         //this.potionRandomizer = 0
         //this.recipePotion = document.querySelectorAll("random-image")
         this.gameOver = false
+        this.animateId = 0
+        this.music = new Audio('')
+        this.music.volume = 0.3;
         
     }
     setTimer(){
         this.timer = setInterval(()=>{
-            this.timerElement.innerHTML = 'TIME: 00:0' +this.sec;
-            this.sec--;
+            this.sec-=1;
+            this.timerElement.innerHTML = 'TIME: 00:' +this.sec;
             if (this.sec < 0) {
                 clearInterval(this.timer);
             }
@@ -32,20 +36,27 @@ class Game {
         this.gameScreen.style.height = `${this.height}px`
         this.gameScreen.style.width = `${this.width}px`
         this.setTimer();
+        this.gameLoop();
+        this.music.play();
+        
 }
 
-
-    end() {
-        this.startScreen.style.display = 'none'
-        this.endScreen.style.display = 'block'
-        this.gameScreen.style.display = 'none'
-        this.endScreen.style.height = `${this.height}px`
-        this.endScreen.style.width = `${this.width}px`
-    }
-
-
-
-
+    gameLoop() {
+        if (this.sec <= 0) {
+            this.gameOver = true
+            this.startScreen.style.display = 'none'
+            this.endScreen.style.display = 'block'
+            this.gameScreen.style.display = 'none'
+            this.endScreen.style.height = `${this.height}px`
+            this.endScreen.style.width = `${this.width}px`
+            this.music.pause();
+        }
+        else {
+            console.log(this.sec)
+            this.animateId = requestAnimationFrame(() => this.gameLoop())
+        }
+        
+  }
 
 
 
@@ -94,7 +105,7 @@ function randomImage() {
         document.querySelector(".random-image-2").src = potionArray[randomIndex2-1];
         document.querySelector(".random-image-3").src = potionArray[randomIndex3-1];
 }
-setTimeout(function(){setInterval(randomImage,6000)}, 6000);
+setTimeout(function(){setInterval(randomImage,4000)}, 4000);
 randomImage()
 
 function getRandomIndex() {
@@ -125,13 +136,10 @@ function getRandomIndex() {
         compare();
         return;
     }
-    
-
-    //const scoreKeep = document.querySelector(".score-keep");
-    //const counter = parseInt(scoreKeep.innerText) +100;
-    //const potions = document.querySelectorAll(".potions")
-    //scoreKeep.innerText = counter;
  }
+
+
+
 
  function compare() {
     const scoreKeep = document.querySelector(".score-keep");
@@ -155,12 +163,4 @@ function getRandomIndex() {
 
 
 
-/* function scoreUpdate(){
-    let randomIndex1 = getRandomIndex();
-    let randomIndex2 = getRandomIndex();
-    let randomIndex3 = getRandomIndex(); 
-    if (potions === randomIndex1 && potions === randomIndex2 && potions === randomIndex3) {
-        scoreAdd();
-    }
-}
- */
+

@@ -9,9 +9,7 @@ window.addEventListener('load', () => {
       game.start()
     }
 
-    function endGame() {
-      game.end()
-    }
+  
   
     startButton.addEventListener('click', function () {
       startGame()
@@ -19,6 +17,6 @@ window.addEventListener('load', () => {
   
     restartButton.addEventListener('click', function () {
       //game.player.element.remove()
-      startGame()
+      location.reload();
     })
 });

@@ -38,6 +38,42 @@ body {
     font-style: italic;
 }
 
+#restart-button {
+    width: 400px;
+    height: 70px;
+    border-radius: 50px;
+    position: absolute;
+    left: 95vmin;
+    top: 70vmin;
+    background-color: rgb(59, 59, 59);
+    font-size: 50px;
+    color: #bc4440;
+    font-style: italic;
+}
+
+/* #high-score {
+    font-size: 40px;
+    color: whitesmoke;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 650px;
+    right: 200px;
+}
+
+.high-score-keep {
+    font-size: 40px;
+    color: whitesmoke;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 695px;
+    right: 150px;
+} */
+
+
 #game-screen {
     display: none;
     position: relative;
