@@ -1,21 +1,18 @@
 class Game {
     constructor(){
         this.startScreen = document.getElementById("start-screen")
+        this.instructionsScreen = document.getElementById("instructions-screen")
         this.gameScreen = document.getElementById("game-screen")
         this.endScreen = document.getElementById("end-screen")
-        //this.score = 0
-        //this.scoreKeep = document.getElementsByClassName("score-keep")
         this.timerElement = document.querySelector('.time')
         this.timer = 0
-        this.sec = 10
+        this.sec = 30
         this.timerElement.innerHTML = 'TIME: 00:' +this.sec;
         this.potion = document.querySelectorAll(".potions")
-        //this.potionRandomizer = 0
-        //this.recipePotion = document.querySelectorAll("random-image")
         this.gameOver = false
         this.animateId = 0
-        this.music = new Audio('')
-        this.music.volume = 0.3;
+        this.music = new Audio('music/Halloween_sounding_music.mp3')
+        this.music.volume = 0.2;
         
     }
     setTimer(){
@@ -40,6 +37,15 @@ class Game {
         this.music.play();
         
 }
+
+    /* instructions() {
+        this.startScreen.style.display = 'none'
+        this.endScreen.style.display = 'none'
+        this.gameScreen.style.display = 'none'
+        this.instructionsScreen.style.display = 'block'
+        this.instructionsScreen.style.height = `${this.height}px`
+        this.instructionsScreen.style.width = `${this.width}px`
+    } */
 
     gameLoop() {
         if (this.sec <= 0) {
@@ -105,7 +111,7 @@ function randomImage() {
         document.querySelector(".random-image-2").src = potionArray[randomIndex2-1];
         document.querySelector(".random-image-3").src = potionArray[randomIndex3-1];
 }
-setTimeout(function(){setInterval(randomImage,4000)}, 4000);
+setTimeout(function(){setInterval(randomImage,4500)}, 4500);
 randomImage()
 
 function getRandomIndex() {
@@ -143,7 +149,7 @@ function getRandomIndex() {
 
  function compare() {
     const scoreKeep = document.querySelector(".score-keep");
-    const counter = parseInt(scoreKeep.innerText) +100;
+    const counter = parseInt(scoreKeep.innerText) +1000;
     const potions = document.querySelectorAll(".potions");
     if (click1 === randomIndex1 && click2 === randomIndex2 && click3 === randomIndex3) {
         scoreKeep.innerText = counter;
@@ -157,6 +163,8 @@ function getRandomIndex() {
         click3 = 0;
     }
  }
+
+
 
 
 

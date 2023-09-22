@@ -17,6 +17,13 @@ body {
     position: relative;
 }
 
+.bigCauldron {
+    position: absolute;
+    display: flex;
+    bottom: 4px;
+    left: 30px;
+}
+
 #title {
     color: #bc4440;
     font-size: 140px;
@@ -38,46 +45,60 @@ body {
     font-style: italic;
 }
 
-#restart-button {
+/* #instructions-button {
     width: 400px;
     height: 70px;
     border-radius: 50px;
     position: absolute;
-    left: 95vmin;
-    top: 70vmin;
+    left: 24vmin;
+    top: 72vmin;
+    background-color: rgb(59, 59, 59);
+    font-size: 50px;
+    color: #bc4440;
+    font-style: italic;
+} */
+
+#restart-button {
+    width: 400px;
+    height: 140px;
+    border-radius: 50px;
+    position: absolute;
+    left: 70vmin;
+    top: 50vmin;
     background-color: rgb(59, 59, 59);
     font-size: 50px;
     color: #bc4440;
     font-style: italic;
 }
 
-/* #high-score {
-    font-size: 40px;
-    color: whitesmoke;
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    bottom: 650px;
-    right: 200px;
-}
-
-.high-score-keep {
-    font-size: 40px;
-    color: whitesmoke;
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    bottom: 695px;
-    right: 150px;
-} */
-
 
 #game-screen {
     display: none;
     position: relative;
 }
+
+#witch {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 220px;
+    left: 500px;
+}
+
+#cauldron {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 468px;
+    left: 370px;
+}
+
+#instructions-screen {
+    display: none;
+    position: relative;
+}
+
 
 .potions {
     position: absolute;
@@ -88,6 +109,12 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.potions-transform:hover {
+    transform: scale(1.2);
+}
+
+
 .score, .time {
     font-size: 30px;
     color: whitesmoke;
@@ -147,6 +174,7 @@ body {
 
 #end-screen {
     display: none;
+    position: relative;
 }
 
 
