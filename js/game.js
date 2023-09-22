@@ -6,7 +6,7 @@ class Game {
         this.endScreen = document.getElementById("end-screen")
         this.timerElement = document.querySelector('.time')
         this.timer = 0
-        this.sec = 30
+        this.sec = 40
         this.timerElement.innerHTML = 'TIME: 00:' +this.sec;
         this.potion = document.querySelectorAll(".potions")
         this.gameOver = false

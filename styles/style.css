@@ -13,22 +13,25 @@ body {
 }
 
 #start-screen {
-    display: block;
+    height: 720px;
     position: relative;
+}
+
+.start-image {
 }
 
 .bigCauldron {
     position: absolute;
     display: flex;
-    bottom: 4px;
+    bottom: 2px;
     left: 30px;
 }
 
 #title {
     color: #bc4440;
     font-size: 140px;
-    position: relative;
-    top: 200px;
+    position: absolute;
+    top: 20px;
     left: 50px;
 }
 
@@ -37,7 +40,7 @@ body {
     height: 70px;
     border-radius: 50px;
     position: absolute;
-    left: 24vmin;
+    left: 30vmin;
     top: 60vmin;
     background-color: rgb(59, 59, 59);
     font-size: 50px;
@@ -50,7 +53,7 @@ body {
     height: 70px;
     border-radius: 50px;
     position: absolute;
-    left: 24vmin;
+    left: 30vmin;
     top: 72vmin;
     background-color: rgb(59, 59, 59);
     font-size: 50px;
