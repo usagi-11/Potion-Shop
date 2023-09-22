@@ -11,7 +11,7 @@ class Game {
         this.potion = document.querySelectorAll(".potions")
         this.gameOver = false
         this.animateId = 0
-        this.music = new Audio('music/Halloween_sounding_music.mp3')
+        this.music = new Audio('music/Halloween_music.mp3')
         this.music.volume = 0.2;
         
     }

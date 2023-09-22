@@ -17,8 +17,6 @@ body {
     position: relative;
 }
 
-.start-image {
-}
 
 .bigCauldron {
     position: absolute;
@@ -62,16 +60,18 @@ body {
 } */
 
 #restart-button {
-    width: 400px;
+    width: 300px;
     height: 140px;
     border-radius: 50px;
     position: absolute;
-    left: 70vmin;
+    left: 108vmin;
     top: 50vmin;
     background-color: rgb(59, 59, 59);
     font-size: 50px;
     color: #bc4440;
     font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 
